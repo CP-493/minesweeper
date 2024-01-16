@@ -5,14 +5,16 @@
 }
 
 body {
-    font-family: 'Darker Grotesque';
+    font-family: 'Darker Grotesque', sans-serif;
     color: rgb(0, 38, 50);
     font-size: 40px;
+    line-height: 1;
     background-color: rgb(216, 238, 232);
     padding: 16px;
 }
 
 .game-container {
+    width: 545px;
     background-color: rgb(128, 128, 128);
 }
 
@@ -28,6 +30,7 @@ body {
 
 h1 {
     font-size: 40px;
+    text-align: center;
 }
 
 .score {
@@ -49,8 +52,10 @@ h1 {
     cursor: pointer;
 }
 
-.cell:hover {
-    background-color: black;
+.cell-bomb {
+    background-image: url('./bomb');
+    background-size: contain;
+    background-position: center;
 }
 
 .end-game-screen {
@@ -83,10 +88,19 @@ h1 {
     border: 2px solid rgb(0, 23, 50);
 }
 
+.win {
+    background-color: rgba(12, 250, 200, 0.5);
+}
+
 .btn:hover {
     background-color: rgb(203, 224, 221);
 }
 
 .hidden {
     display: none;
+}
+
+.cell-clicked {
+    background-color: rgb(157, 197, 199);
+    cursor: not-allowed;
 }
